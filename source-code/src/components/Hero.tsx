@@ -33,9 +33,9 @@ export default function Hero() {
         <img
           src="/hero-bg.jpg"
           alt="Moskee Achtergrond"
-          className="w-full h-full object-cover opacity-50 grayscale-0"
+          className="w-full h-full object-cover opacity-30 grayscale-[10%]"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" style={{ background: "linear-gradient(180deg, transparent 0%, transparent 40%, var(--background) 95%)" }}></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background transition-opacity duration-500" style={{ background: "linear-gradient(180deg, transparent 0%, transparent 40%, var(--background) 95%)" }}></div>
       </div>
 
       {/* Decorative Elements */}
@@ -43,7 +43,7 @@ export default function Hero() {
       <div className="absolute bottom-[5%] left-[-5%] w-64 h-64 rounded-full neumorphic-inset animate-float opacity-20 z-10" style={{ animationDelay: "1.5s" }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-        <div className="text-center mb-24">
+        <div className="text-center mb-24 backdrop-blur-[1px]">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ export default function Hero() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-display font-extrabold text-5xl md:text-7xl tracking-tight text-foreground mb-6"
+            className="font-display font-extrabold text-5xl md:text-7xl tracking-tight text-foreground mb-6 drop-shadow-sm"
           >
             Rechtvaardigheid in <br />
             <span className="text-accent">Hartje Eindhoven</span>
@@ -65,7 +65,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="font-body text-lg md:text-xl text-muted max-w-2xl mx-auto mb-10 leading-relaxed"
+            className="font-body text-lg md:text-xl text-foreground font-medium max-w-2xl mx-auto mb-10 leading-relaxed"
           >
             Welkom bij Stichting Alabraar. Samen bouwen we aan een gemeenschap gebaseerd op educatie, welzijn en humanitaire dienstverlening.
           </motion.p>
