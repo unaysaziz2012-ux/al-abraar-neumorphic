@@ -42,7 +42,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="w-12 h-12 rounded-full neumorphic-inset flex items-center justify-center p-1 overflow-hidden transition-transform group-hover:scale-105">
               <Image
-                src="https://www.alabraar.nl/wp-content/uploads/2022/09/Logo-Stichting-Alabraar.png"
+                src="/logo.svg"
                 alt="Alabraar Logo"
                 width={40}
                 height={40}
