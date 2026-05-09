@@ -11,12 +11,12 @@ export default function Home() {
       <Hero />
       
       {/* Massive Cinematic Spacer */}
-      <div className="h-32 lg:h-64 w-full bg-background relative z-10" />
+      <div className="h-48 lg:h-96 w-full bg-background relative z-10" />
 
       <PrayerTimes />
       
       {/* Massive Cinematic Spacer */}
-      <div className="h-32 lg:h-64 w-full bg-background relative z-10" />
+      <div className="h-48 lg:h-96 w-full bg-background relative z-10" />
 
       {/* Community Section */}
       <section id="over-ons" className="py-64 relative overflow-hidden">
@@ -64,12 +64,12 @@ export default function Home() {
       </section>
 
       {/* Massive Cinematic Spacer */}
-      <div className="h-32 lg:h-64 w-full bg-background relative z-10" />
+      <div className="h-48 lg:h-96 w-full bg-background relative z-10" />
       
       <Projects />
       
       {/* Massive Cinematic Spacer */}
-      <div className="h-32 lg:h-64 w-full bg-background relative z-10" />
+      <div className="h-48 lg:h-96 w-full bg-background relative z-10" />
 
       {/* Newsletter Section */}
       <section className="py-80 relative">
