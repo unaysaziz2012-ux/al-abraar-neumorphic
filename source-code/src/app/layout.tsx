@@ -32,8 +32,8 @@ export default function RootLayout({
       className={`${plusJakartaSans.variable} ${dmSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-body bg-background text-foreground selection:bg-accent selection:text-white">
-        {children}
         <PrayerTimesTab />
+        {children}
       </body>
     </html>
   );

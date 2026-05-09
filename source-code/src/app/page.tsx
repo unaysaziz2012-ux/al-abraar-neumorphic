@@ -11,8 +11,11 @@ export default function Home() {
       <Hero />
       <PrayerTimes />
       
+      {/* Cinematic Spacing */}
+      <div className="h-48 lg:h-80 w-full bg-background relative z-10" />
+
       {/* Community Section */}
-      <section id="over-ons" className="py-32 lg:py-56 relative overflow-hidden">
+      <section id="over-ons" className="py-32 relative overflow-hidden my-20">
         <div className="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 rounded-full neumorphic-inset opacity-20 -translate-x-1/2" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,8 +59,13 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Cinematic Spacing */}
+      <div className="h-48 lg:h-80 w-full bg-background relative z-10" />
+      
       <Projects />
       
+      {/* Cinematic Spacing */}
+      <div className="h-48 lg:h-80 w-full bg-background relative z-10" />
       {/* Newsletter Section */}
       <section className="py-40">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
