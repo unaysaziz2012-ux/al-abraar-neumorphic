@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0 bg-[#ecf0f3]">
+      <div className="absolute inset-0 z-0 bg-[#E0E5EC]">
         <img
           src="/hero-bg.jpg"
           alt="Moskee Achtergrond"
@@ -18,7 +18,7 @@ export default function Hero() {
         <div 
           className="absolute inset-0 z-10" 
           style={{ 
-            background: "linear-gradient(to bottom, transparent 0%, transparent 40%, rgba(236, 240, 243, 0.2) 60%, rgba(236, 240, 243, 0.5) 80%, rgba(236, 240, 243, 0.8) 90%, #ecf0f3 100%)" 
+            background: "linear-gradient(to bottom, transparent 0%, transparent 40%, rgba(224, 229, 236, 0.2) 60%, rgba(224, 229, 236, 0.5) 80%, rgba(224, 229, 236, 0.8) 90%, #E0E5EC 100%)" 
           }} 
         />
       </div>
@@ -28,7 +28,7 @@ export default function Hero() {
       <div className="absolute bottom-[5%] left-[-5%] w-64 h-64 rounded-full neumorphic-inset animate-float opacity-20 z-10" style={{ animationDelay: "1.5s" }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-        <div className="max-w-4xl mx-auto p-12 md:p-20 rounded-[80px] neumorphic-extruded bg-[#ecf0f3] text-center relative overflow-hidden">
+        <div className="max-w-4xl mx-auto p-12 md:p-20 rounded-[80px] neumorphic-extruded bg-[#E0E5EC] text-center relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 rounded-full neumorphic-inset opacity-40 -translate-y-1/2 translate-x-1/2" />
           <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full neumorphic-inset opacity-30 translate-y-1/2 -translate-x-1/2" />
           
