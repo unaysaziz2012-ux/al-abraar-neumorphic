@@ -13,12 +13,12 @@ export default function Hero() {
         <img
           src="/hero-bg.jpg"
           alt="Moskee Achtergrond"
-          className="w-full h-full object-cover opacity-[0.02] transition-opacity duration-1000"
+          className="w-full h-full object-cover opacity-20"
         />
         <div 
           className="absolute inset-0 z-10" 
           style={{ 
-            background: "radial-gradient(circle at center, transparent 0%, #ecf0f3 100%)" 
+            background: "linear-gradient(to bottom, transparent 0%, transparent 70%, #ecf0f3 100%)" 
           }} 
         />
       </div>
