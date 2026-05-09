@@ -4,26 +4,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Heart, BookOpen, Users } from "lucide-react";
 
-const quickActions = [
-  {
-    title: "Project Moskee",
-    icon: <Users className="text-accent" />,
-    desc: "Steun de bouw en ontwikkeling van onze moskee.",
-    cta: "Lees meer"
-  },
-  {
-    title: "Onderwijs",
-    icon: <BookOpen className="text-accent-secondary" />,
-    desc: "Ontdek onze lessen voor kinderen en volwassenen.",
-    cta: "Bekijk rooster"
-  },
-  {
-    title: "Doneren",
-    icon: <Heart className="text-accent" />,
-    desc: "Draag bij aan onze humanitaire projecten.",
-    cta: "Direct doneren"
-  },
-];
 
 export default function Hero() {
   return (
@@ -43,7 +23,7 @@ export default function Hero() {
       <div className="absolute bottom-[5%] left-[-5%] w-64 h-64 rounded-full neumorphic-inset animate-float opacity-20 z-10" style={{ animationDelay: "1.5s" }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-        <div className="max-w-4xl mx-auto p-12 md:p-16 rounded-[48px] neumorphic-extruded bg-background/80 backdrop-blur-md text-center mb-40 relative overflow-hidden">
+        <div className="max-w-4xl mx-auto p-12 md:p-16 rounded-[48px] neumorphic-extruded bg-background/80 backdrop-blur-md text-center relative overflow-hidden">
           <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full neumorphic-inset opacity-20" />
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -84,31 +64,6 @@ export default function Hero() {
               Ontdek Meer
             </button>
           </motion.div>
-        </div>
-
-        {/* Quick Action Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {quickActions.map((action, index) => (
-            <motion.div
-              key={action.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 + index * 0.1 }}
-              className="group p-8 rounded-[32px] neumorphic-extruded bg-background hover:translate-y-[-8px] transition-all duration-300"
-            >
-              <div className="w-16 h-16 rounded-2xl neumorphic-inset-deep flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                {action.icon}
-              </div>
-              <h3 className="font-display font-bold text-2xl text-foreground mb-3">{action.title}</h3>
-              <p className="font-body text-muted mb-6">{action.desc}</p>
-              <button className="font-body font-bold text-accent hover:text-accent-light transition-colors flex items-center gap-2">
-                {action.cta}
-                <span className="w-8 h-8 rounded-full neumorphic-extruded-sm flex items-center justify-center group-hover:neumorphic-inset transition-all">
-                  →
-                </span>
-              </button>
-            </motion.div>
-          ))}
         </div>
       </div>
     </section>
