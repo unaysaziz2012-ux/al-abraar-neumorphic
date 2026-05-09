@@ -12,10 +12,10 @@ export default function Home() {
       <PrayerTimes />
       
       {/* Cinematic Spacing */}
-      <div className="h-48 lg:h-80 w-full bg-background relative z-10" />
+      <div className="h-64 lg:h-[32rem] w-full bg-background relative z-10" />
 
       {/* Community Section */}
-      <section id="over-ons" className="py-32 relative overflow-hidden my-20">
+      <section id="over-ons" className="py-48 relative overflow-hidden">
         <div className="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 rounded-full neumorphic-inset opacity-20 -translate-x-1/2" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,14 +60,14 @@ export default function Home() {
       </section>
 
       {/* Cinematic Spacing */}
-      <div className="h-48 lg:h-80 w-full bg-background relative z-10" />
+      <div className="h-64 lg:h-[32rem] w-full bg-background relative z-10" />
       
       <Projects />
       
       {/* Cinematic Spacing */}
-      <div className="h-48 lg:h-80 w-full bg-background relative z-10" />
+      <div className="h-64 lg:h-[32rem] w-full bg-background relative z-10" />
       {/* Newsletter Section */}
-      <section className="py-40">
+      <section className="py-64 relative">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="p-12 md:p-16 rounded-[48px] neumorphic-extruded bg-background text-center relative overflow-hidden">
             <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full neumorphic-inset-deep opacity-40" />
