@@ -691,28 +691,9 @@
         </div>
     </footer>
 
-        <!-- Lightweight Custom Cursor -->
-        <div id="cursor-container" class="fixed inset-0 pointer-events-none z-[9999] [--x:-100px] [--y:-100px]">
-            <div id="cursor-ring" class="absolute w-8 h-8 rounded-full border-2 border-accent/30 -translate-x-1/2 -translate-y-1/2 transition-transform duration-300 ease-out" style="transform: translate3d(var(--x), var(--y), 0) scale(var(--cursor-scale, 1));"></div>
-            <div id="cursor-dot" class="absolute w-1.5 h-1.5 bg-accent rounded-full -translate-x-1/2 -translate-y-1/2" style="transform: translate3d(var(--x), var(--y), 0);"></div>
-        </div>
-
-        <style>
-            :root {
-                --cursor-scale: 1;
-            }
-            body:has(button:hover, a:hover, .neumorphic-extruded:hover, .neumorphic-inset:hover) {
-                --cursor-scale: 2;
-            }
-        </style>
+        <!-- Removed Custom Cursor to fix lag -->
 
         <script>
-            const cursorContainer = document.getElementById('cursor-container');
-            document.addEventListener('mousemove', (e) => {
-                cursorContainer.style.setProperty('--x', e.clientX + 'px');
-                cursorContainer.style.setProperty('--y', e.clientY + 'px');
-            }, { passive: true });
-
             // Initialize Lucide Icons
             lucide.createIcons();
 
