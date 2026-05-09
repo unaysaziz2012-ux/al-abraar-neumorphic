@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, DM_Sans } from "next/font/google";
 import "./globals.css";
+import PrayerTimesTab from "@/components/PrayerTimesTab";
+import CustomCursor from "@/components/CustomCursor";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
@@ -16,10 +18,10 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: "Moskee Al-Abraar Eindhoven | Welkom bij jouw moskee",
-  description: "Welkom bij Moskee Al-Abraar in Eindhoven. Een plek voor gebed, gemeenschap en educatie. Ontdek onze projecten en activiteiten.",
+  description:
+    "Welkom bij Moskee Al-Abraar in Eindhoven. Een plek voor gebed, gemeenschap en educatie in hartje Eindhoven. Ontdek onze projecten, gebedstijden en activiteiten.",
+  keywords: ["moskee", "al-abraar", "eindhoven", "islam", "gebed", "gemeenschap"],
 };
-
-import PrayerTimesTab from "@/components/PrayerTimesTab";
 
 export default function RootLayout({
   children,
@@ -27,11 +29,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="nl"
-      className={`${plusJakartaSans.variable} ${dmSans.variable} h-full antialiased`}
-    >
+    <html lang="nl" className={`${plusJakartaSans.variable} ${dmSans.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-body bg-background text-foreground selection:bg-accent selection:text-white">
+        <CustomCursor />
         <PrayerTimesTab />
         {children}
       </body>
