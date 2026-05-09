@@ -7,15 +7,20 @@ import { Heart, BookOpen, Users } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative pt-80 pb-40 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src="/hero-bg.jpg"
           alt="Moskee Achtergrond"
-          className="w-full h-full object-cover opacity-50 grayscale-0"
+          className="w-full h-full object-cover opacity-80 transition-opacity duration-1000"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background"></div>
+        <div 
+          className="absolute inset-0 z-10" 
+          style={{ 
+            background: "linear-gradient(to bottom, rgba(236, 240, 243, 0.4) 0%, transparent 20%, transparent 60%, #ecf0f3 95%)" 
+          }} 
+        />
       </div>
 
       {/* Decorative Elements */}
