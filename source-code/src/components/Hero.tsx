@@ -9,16 +9,16 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0 bg-[#ecf0f3]">
+      <div className="absolute inset-0 z-0 bg-white">
         <img
           src="/hero-bg.jpg"
           alt="Moskee Achtergrond"
-          className="w-full h-full object-cover opacity-30 transition-opacity duration-1000"
+          className="w-full h-full object-cover opacity-[0.05] transition-opacity duration-1000"
         />
         <div 
           className="absolute inset-0 z-10" 
           style={{ 
-            background: "linear-gradient(to bottom, rgba(236, 240, 243, 0.6) 0%, transparent 20%, transparent 70%, #ecf0f3 100%)" 
+            background: "linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, transparent 40%, transparent 60%, #ecf0f3 100%)" 
           }} 
         />
       </div>
@@ -28,8 +28,8 @@ export default function Hero() {
       <div className="absolute bottom-[5%] left-[-5%] w-64 h-64 rounded-full neumorphic-inset animate-float opacity-20 z-10" style={{ animationDelay: "1.5s" }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-        <div className="max-w-4xl mx-auto p-12 md:p-20 rounded-[64px] neumorphic-extruded bg-background/60 backdrop-blur-xl text-center relative overflow-hidden border border-white/20">
-          <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full neumorphic-inset opacity-10" />
+        <div className="max-w-4xl mx-auto p-12 md:p-20 rounded-[64px] neumorphic-extruded bg-white/40 backdrop-blur-2xl text-center relative overflow-hidden border border-white/40">
+          <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full neumorphic-inset opacity-5" />
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export default function Hero() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-display font-extrabold text-5xl md:text-8xl tracking-tight text-foreground mb-8 relative z-10 leading-[0.95]"
+            className="font-display font-extrabold text-5xl md:text-8xl tracking-tight text-slate-900 mb-8 relative z-10 leading-[0.95]"
           >
             Rechtvaardigheid in <br />
             <span className="text-accent drop-shadow-sm">Hartje Eindhoven</span>
@@ -51,7 +51,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="font-body text-lg md:text-2xl text-muted/80 max-w-2xl mx-auto mb-12 leading-relaxed relative z-10 font-medium"
+            className="font-body text-lg md:text-2xl text-slate-600 max-w-2xl mx-auto mb-12 leading-relaxed relative z-10 font-medium"
           >
             Welkom bij Stichting Alabraar. Samen bouwen we aan een gemeenschap gebaseerd op educatie, welzijn en humanitaire dienstverlening.
           </motion.p>
