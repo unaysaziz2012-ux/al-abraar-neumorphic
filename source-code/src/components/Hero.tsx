@@ -30,22 +30,29 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="max-w-4xl mx-auto p-12 md:p-20 rounded-[80px] neumorphic-extruded bg-[#E0E5EC] text-center relative overflow-hidden">
-          {/* Live Context Widget */}
-          <div className="absolute top-10 left-10 hidden md:flex items-center space-x-3 px-5 py-2.5 rounded-full neumorphic-inset-sm bg-[#E0E5EC]/50 backdrop-blur-sm z-20">
-            <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            <span className="text-[10px] font-bold uppercase tracking-widest text-muted">Volgende Gebed: Dhuhr (13:42)</span>
-          </div>
-
           <div className="absolute top-0 right-0 w-64 h-64 rounded-full neumorphic-inset opacity-40 -translate-y-1/2 translate-x-1/2" />
           <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full neumorphic-inset opacity-30 translate-y-1/2 -translate-x-1/2" />
           
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-block px-6 py-2 rounded-full neumorphic-inset-sm text-accent font-body font-bold text-xs tracking-[0.2em] uppercase mb-10 relative z-10"
-          >
-            Eindhovens Grootste Gemeenschap
-          </motion.div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 relative z-10">
+            {/* Live Context Widget */}
+            <motion.div 
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="flex items-center gap-3 px-5 py-2.5 rounded-full neumorphic-inset-sm bg-[#E0E5EC]/50 backdrop-blur-sm"
+            >
+              <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+              <span className="text-[10px] font-bold uppercase tracking-widest text-muted">Volgende Gebed: Dhuhr (13:42)</span>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="px-6 py-2 rounded-full neumorphic-inset-sm text-accent font-body font-bold text-xs tracking-[0.2em] uppercase"
+            >
+              Eindhovens Grootste Gemeenschap
+            </motion.div>
+          </div>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -66,15 +73,15 @@ export default function Hero() {
           </motion.p>
 
 
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 relative z-10">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 relative z-10">
             <button
-              className="w-full sm:w-auto px-10 py-5 rounded-3xl neumorphic-extruded bg-accent text-white font-body font-bold text-lg transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center space-x-3"
+              className="w-full sm:w-auto px-10 py-5 rounded-3xl neumorphic-extruded bg-accent text-white font-body font-bold text-lg transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-3"
             >
               <UserPlus size={20} strokeWidth={2.5} />
               <span>Word Lid</span>
             </button>
             <button
-              className="w-full sm:w-auto px-10 py-5 rounded-3xl neumorphic-extruded bg-[#E0E5EC] text-foreground font-body font-bold text-lg transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center space-x-3"
+              className="w-full sm:w-auto px-10 py-5 rounded-3xl neumorphic-extruded bg-[#E0E5EC] text-foreground font-body font-bold text-lg transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-3"
             >
               <span>Ontdek Meer</span>
               <ArrowRight size={20} strokeWidth={2.5} />
