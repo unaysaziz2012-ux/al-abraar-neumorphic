@@ -6,20 +6,24 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background pb-32">
       <Navbar />
       <Hero />
+      
+      {/* Massive Cinematic Spacer */}
+      <div className="h-32 lg:h-64 w-full bg-background relative z-10" />
+
       <PrayerTimes />
       
-      {/* Cinematic Spacing */}
-      <div className="h-64 lg:h-[32rem] w-full bg-background relative z-10" />
+      {/* Massive Cinematic Spacer */}
+      <div className="h-32 lg:h-64 w-full bg-background relative z-10" />
 
       {/* Community Section */}
-      <section id="over-ons" className="py-48 relative overflow-hidden">
+      <section id="over-ons" className="py-64 relative overflow-hidden">
         <div className="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 rounded-full neumorphic-inset opacity-20 -translate-x-1/2" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-24">
+          <div className="flex flex-col lg:flex-row items-center gap-40">
             <div className="lg:w-1/2 order-2 lg:order-1">
               <div className="p-4 rounded-[48px] neumorphic-extruded bg-background max-w-md mx-auto rotate-2 hover:rotate-0 transition-transform duration-500">
                 <div className="relative aspect-square rounded-[40px] overflow-hidden neumorphic-inset-deep">
@@ -32,7 +36,7 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="lg:w-1/2 order-1 lg:order-2 space-y-8">
+            <div className="lg:w-1/2 order-1 lg:order-2 space-y-12">
               <div className="inline-block px-4 py-1.5 rounded-full neumorphic-inset-sm text-accent font-body font-bold text-sm tracking-wider uppercase">
                 Over Ons
               </div>
@@ -44,12 +48,12 @@ export default function Home() {
                 Stichting Alabraar is meer dan alleen een moskee. Het is een centrum voor spirituele groei, educatieve ondersteuning en maatschappelijke hulp. Wij geloven in de kracht van een sterke, verenigde gemeenschap.
               </p>
               
-              <div className="grid grid-cols-2 gap-6 pt-4">
-                <div className="p-6 rounded-3xl neumorphic-extruded">
+              <div className="grid grid-cols-2 gap-10 pt-4">
+                <div className="p-8 rounded-3xl neumorphic-extruded">
                   <p className="font-display font-extrabold text-3xl text-accent mb-1">500+</p>
                   <p className="font-body text-sm text-muted">Wekelijkse bezoekers</p>
                 </div>
-                <div className="p-6 rounded-3xl neumorphic-extruded">
+                <div className="p-8 rounded-3xl neumorphic-extruded">
                   <p className="font-display font-extrabold text-3xl text-accent mb-1">20+</p>
                   <p className="font-body text-sm text-muted">Vrijwilligers</p>
                 </div>
@@ -59,36 +63,37 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Cinematic Spacing */}
-      <div className="h-64 lg:h-[32rem] w-full bg-background relative z-10" />
+      {/* Massive Cinematic Spacer */}
+      <div className="h-32 lg:h-64 w-full bg-background relative z-10" />
       
       <Projects />
       
-      {/* Cinematic Spacing */}
-      <div className="h-64 lg:h-[32rem] w-full bg-background relative z-10" />
+      {/* Massive Cinematic Spacer */}
+      <div className="h-32 lg:h-64 w-full bg-background relative z-10" />
+
       {/* Newsletter Section */}
-      <section className="py-64 relative">
+      <section className="py-80 relative">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <div className="p-12 md:p-16 rounded-[48px] neumorphic-extruded bg-background text-center relative overflow-hidden">
+          <div className="p-12 md:p-24 rounded-[64px] neumorphic-extruded bg-background text-center relative overflow-hidden">
             <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full neumorphic-inset-deep opacity-40" />
             
-            <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground mb-6 relative z-10">
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-foreground mb-8 relative z-10">
               Blijf op de hoogte
             </h2>
-            <p className="font-body text-muted mb-10 max-w-lg mx-auto relative z-10">
+            <p className="font-body text-muted text-lg mb-12 max-w-lg mx-auto relative z-10">
               Meld je aan voor onze nieuwsbrief en ontvang updates over onze projecten, lessen en evenementen.
             </p>
             
-            <form className="max-w-md mx-auto flex flex-col sm:flex-row gap-4 relative z-10">
+            <form className="max-w-md mx-auto flex flex-col sm:flex-row gap-6 relative z-10">
               <div className="flex-grow rounded-2xl neumorphic-inset p-1">
                 <input 
                   type="email" 
                   placeholder="E-mailadres" 
-                  className="w-full h-full bg-transparent border-none focus:ring-0 px-6 py-4 font-body text-foreground placeholder:text-muted/50"
+                  className="w-full h-full bg-transparent border-none focus:ring-0 px-6 py-5 font-body text-foreground placeholder:text-muted/50"
                   required
                 />
               </div>
-              <button className="px-8 py-4 rounded-2xl bg-accent text-white font-body font-bold shadow-lg hover:bg-accent-light transition-all active:scale-95 whitespace-nowrap">
+              <button className="px-10 py-5 rounded-2xl bg-accent text-white font-body font-bold text-lg shadow-xl hover:bg-accent-light transition-all active:scale-95 whitespace-nowrap">
                 Inschrijven
               </button>
             </form>

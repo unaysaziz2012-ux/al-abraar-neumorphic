@@ -17,7 +17,7 @@ export default function PrayerTimes() {
   return (
     <section id="gebedstijden" className="py-32 lg:py-56 bg-background">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12">
+        <div className="text-center mb-24">
           <h2 className="font-display font-bold text-4xl text-foreground mb-4">Gebedstijden Eindhoven</h2>
           <p className="font-body text-muted italic">"Voorwaar, het gebed is de gelovigen op vaste tijden voorgeschreven." (Koran 4:103)</p>
         </div>
