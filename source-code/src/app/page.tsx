@@ -12,11 +12,11 @@ export default function Home() {
       <PrayerTimes />
       
       {/* Community Section */}
-      <section id="over-ons" className="py-20 relative overflow-hidden">
+      <section id="over-ons" className="py-40 relative overflow-hidden">
         <div className="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 rounded-full neumorphic-inset opacity-20 -translate-x-1/2" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
+          <div className="flex flex-col lg:flex-row items-center gap-24">
             <div className="lg:w-1/2 order-2 lg:order-1">
               <div className="p-4 rounded-[48px] neumorphic-extruded bg-background max-w-md mx-auto rotate-2 hover:rotate-0 transition-transform duration-500">
                 <div className="relative aspect-square rounded-[40px] overflow-hidden neumorphic-inset-deep">
@@ -59,7 +59,7 @@ export default function Home() {
       <Projects />
       
       {/* Newsletter Section */}
-      <section className="py-20">
+      <section className="py-40">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="p-12 md:p-16 rounded-[48px] neumorphic-extruded bg-background text-center relative overflow-hidden">
             <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full neumorphic-inset-deep opacity-40" />

@@ -15,7 +15,7 @@ const prayers = [
 
 export default function PrayerTimes() {
   return (
-    <section id="gebedstijden" className="py-20 bg-background">
+    <section id="gebedstijden" className="py-40 bg-background">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
           <h2 className="font-display font-bold text-4xl text-foreground mb-4">Gebedstijden Eindhoven</h2>

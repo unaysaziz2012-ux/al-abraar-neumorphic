@@ -27,7 +27,7 @@ const quickActions = [
 
 export default function Hero() {
   return (
-    <section className="relative pt-48 pb-24 overflow-hidden">
+    <section className="relative pt-80 pb-40 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -43,7 +43,7 @@ export default function Hero() {
       <div className="absolute bottom-[5%] left-[-5%] w-64 h-64 rounded-full neumorphic-inset animate-float opacity-20 z-10" style={{ animationDelay: "1.5s" }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-        <div className="max-w-4xl mx-auto p-12 rounded-[48px] neumorphic-extruded bg-background/80 backdrop-blur-md text-center mb-24 relative overflow-hidden">
+        <div className="max-w-4xl mx-auto p-12 md:p-16 rounded-[48px] neumorphic-extruded bg-background/80 backdrop-blur-md text-center mb-40 relative overflow-hidden">
           <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full neumorphic-inset opacity-20" />
           <motion.div
             initial={{ opacity: 0, y: -20 }}
