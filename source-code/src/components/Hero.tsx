@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { UserPlus, ArrowRight } from "lucide-react";
 import { Heart, BookOpen, Users } from "lucide-react";
 
 
@@ -29,6 +30,12 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="max-w-4xl mx-auto p-12 md:p-20 rounded-[80px] neumorphic-extruded bg-[#E0E5EC] text-center relative overflow-hidden">
+          {/* Live Context Widget */}
+          <div className="absolute top-10 left-10 hidden md:flex items-center space-x-3 px-5 py-2.5 rounded-full neumorphic-inset-sm bg-[#E0E5EC]/50 backdrop-blur-sm z-20">
+            <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+            <span className="text-[10px] font-bold uppercase tracking-widest text-muted">Volgende Gebed: Dhuhr (13:42)</span>
+          </div>
+
           <div className="absolute top-0 right-0 w-64 h-64 rounded-full neumorphic-inset opacity-40 -translate-y-1/2 translate-x-1/2" />
           <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full neumorphic-inset opacity-30 translate-y-1/2 -translate-x-1/2" />
           
@@ -58,19 +65,21 @@ export default function Hero() {
             Welkom bij Stichting Alabraar. Samen bouwen we aan een gemeenschap gebaseerd op educatie, welzijn en humanitaire dienstverlening.
           </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="flex flex-wrap justify-center gap-6"
-          >
-            <button className="px-10 py-5 rounded-2xl bg-accent text-white font-body font-bold text-lg shadow-xl hover:bg-accent-light transition-all active:scale-95">
-              Word Lid
+
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 relative z-10">
+            <button
+              className="w-full sm:w-auto px-10 py-5 rounded-3xl neumorphic-extruded bg-accent text-white font-body font-bold text-lg transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center space-x-3"
+            >
+              <UserPlus size={20} strokeWidth={2.5} />
+              <span>Word Lid</span>
             </button>
-            <button className="px-10 py-5 rounded-2xl neumorphic-extruded hover:neumorphic-extruded-hover active:neumorphic-inset transition-all font-body font-bold text-lg text-foreground bg-background/50 backdrop-blur-sm">
-              Ontdek Meer
+            <button
+              className="w-full sm:w-auto px-10 py-5 rounded-3xl neumorphic-extruded bg-[#E0E5EC] text-foreground font-body font-bold text-lg transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center space-x-3"
+            >
+              <span>Ontdek Meer</span>
+              <ArrowRight size={20} strokeWidth={2.5} />
             </button>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
