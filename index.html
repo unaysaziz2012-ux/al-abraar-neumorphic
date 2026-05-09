@@ -4,9 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stichting Alabraar - Rechtvaardigheid in Hartje Eindhoven</title>
+    <title>Moskee Al-Abraar Eindhoven | Welkom bij jouw moskee</title>
     <meta name="description"
-        content="Welkom bij Stichting Alabraar. Samen bouwen we aan een gemeenschap gebaseerd op educatie, welzijn en humanitaire dienstverlening.">
+        content="Welkom bij Moskee Al-Abraar in Eindhoven. Een plek voor gebed, gemeenschap en educatie. Ontdek onze projecten en activiteiten.">
+
+    <!-- Schema.org / JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Mosque",
+      "name": "Moskee Al-Abraar",
+      "image": "https://alabraar.nl/hero-bg.jpg",
+      "@id": "https://alabraar.nl",
+      "url": "https://alabraar.nl",
+      "telephone": "+31402456789",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kastanjelaan 12",
+        "addressLocality": "Eindhoven",
+        "postalCode": "5616 LN",
+        "addressCountry": "NL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.4416,
+        "longitude": 5.4697
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "05:00",
+        "closes": "23:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/alabraar",
+        "https://www.instagram.com/alabraar"
+      ]
+    }
+    </script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -648,32 +691,27 @@
         </div>
     </footer>
 
-        <!-- Custom Cursor -->
-        <div id="cursor-dot" class="fixed top-0 left-0 w-1.5 h-1.5 bg-accent rounded-full pointer-events-none z-[9999]"></div>
-        <div id="cursor-ring" class="fixed top-0 left-0 w-8 h-8 rounded-full border-2 border-accent/30 pointer-events-none z-[9999] transition-all duration-300 ease-out"></div>
+        <!-- Lightweight Custom Cursor -->
+        <div id="cursor-container" class="fixed inset-0 pointer-events-none z-[9999] [--x:-100px] [--y:-100px]">
+            <div id="cursor-ring" class="absolute w-8 h-8 rounded-full border-2 border-accent/30 -translate-x-1/2 -translate-y-1/2 transition-transform duration-300 ease-out" style="transform: translate3d(var(--x), var(--y), 0) scale(var(--cursor-scale, 1));"></div>
+            <div id="cursor-dot" class="absolute w-1.5 h-1.5 bg-accent rounded-full -translate-x-1/2 -translate-y-1/2" style="transform: translate3d(var(--x), var(--y), 0);"></div>
+        </div>
+
+        <style>
+            :root {
+                --cursor-scale: 1;
+            }
+            body:has(button:hover, a:hover, .neumorphic-extruded:hover, .neumorphic-inset:hover) {
+                --cursor-scale: 2;
+            }
+        </style>
 
         <script>
-            const dot = document.getElementById('cursor-dot');
-            const ring = document.getElementById('cursor-ring');
-
+            const cursorContainer = document.getElementById('cursor-container');
             document.addEventListener('mousemove', (e) => {
-                dot.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
-                ring.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
-            });
-
-            document.addEventListener('mouseover', (e) => {
-                if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A' || e.target.closest('.neumorphic-extruded') || e.target.closest('.neumorphic-inset')) {
-                    ring.style.width = '60px';
-                    ring.style.height = '60px';
-                    ring.style.backgroundColor = 'rgba(197, 160, 89, 0.1)';
-                    ring.style.borderColor = 'rgba(197, 160, 89, 0.5)';
-                } else {
-                    ring.style.width = '32px';
-                    ring.style.height = '32px';
-                    ring.style.backgroundColor = 'transparent';
-                    ring.style.borderColor = 'rgba(197, 160, 89, 0.3)';
-                }
-            });
+                cursorContainer.style.setProperty('--x', e.clientX + 'px');
+                cursorContainer.style.setProperty('--y', e.clientY + 'px');
+            }, { passive: true });
 
             // Initialize Lucide Icons
             lucide.createIcons();

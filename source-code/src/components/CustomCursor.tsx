@@ -1,72 +1,47 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { motion, useSpring, useMotionValue } from "framer-motion";
+import React, { useEffect } from "react";
 
 export default function CustomCursor() {
-  const [isHovered, setIsHovered] = useState(false);
-  
-  const cursorX = useMotionValue(-100);
-  const cursorY = useMotionValue(-100);
-  
-  const springConfig = { damping: 25, stiffness: 250 };
-  const cursorXSpring = useSpring(cursorX, springConfig);
-  const cursorYSpring = useSpring(cursorY, springConfig);
-
   useEffect(() => {
+    const cursor = document.getElementById("custom-cursor-container");
+    if (!cursor) return;
+
     const moveCursor = (e: MouseEvent) => {
-      cursorX.set(e.clientX);
-      cursorY.set(e.clientY);
+      // Use CSS Variables for high-performance updates
+      cursor.style.setProperty("--x", `${e.clientX}px`);
+      cursor.style.setProperty("--y", `${e.clientY}px`);
     };
 
-    const handleHover = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (
-        target.tagName === "BUTTON" ||
-        target.tagName === "A" ||
-        target.closest(".neumorphic-extruded") ||
-        target.closest(".neumorphic-inset")
-      ) {
-        setIsHovered(true);
-      } else {
-        setIsHovered(false);
-      }
-    };
-
-    window.addEventListener("mousemove", moveCursor);
-    window.addEventListener("mouseover", handleHover);
-
-    return () => {
-      window.removeEventListener("mousemove", moveCursor);
-      window.removeEventListener("mouseover", handleHover);
-    };
-  }, [cursorX, cursorY]);
+    window.addEventListener("mousemove", moveCursor, { passive: true });
+    return () => window.removeEventListener("mousemove", moveCursor);
+  }, []);
 
   return (
-    <>
-      <motion.div
-        className="fixed top-0 left-0 w-8 h-8 rounded-full border-2 border-accent/30 pointer-events-none z-[9999] mix-blend-multiply"
+    <div
+      id="custom-cursor-container"
+      className="fixed inset-0 pointer-events-none z-[9999] [--x:-100px] [--y:-100px]"
+    >
+      <div
+        className="absolute w-8 h-8 rounded-full border-2 border-accent/30 -translate-x-1/2 -translate-y-1/2 transition-transform duration-300 ease-out"
         style={{
-          translateX: cursorXSpring,
-          translateY: cursorYSpring,
-          x: "-50%",
-          y: "-50%",
-        }}
-        animate={{
-          scale: isHovered ? 2.5 : 1,
-          backgroundColor: isHovered ? "rgba(197, 160, 89, 0.1)" : "rgba(197, 160, 89, 0)",
-          borderColor: isHovered ? "rgba(197, 160, 89, 0.5)" : "rgba(197, 160, 89, 0.3)",
+          transform: "translate3d(var(--x), var(--y), 0) scale(var(--cursor-scale, 1))",
         }}
       />
-      <motion.div
-        className="fixed top-0 left-0 w-1.5 h-1.5 bg-accent rounded-full pointer-events-none z-[9999]"
+      <div
+        className="absolute w-1.5 h-1.5 bg-accent rounded-full -translate-x-1/2 -translate-y-1/2"
         style={{
-          translateX: cursorX,
-          translateY: cursorY,
-          x: "-50%",
-          y: "-50%",
+          transform: "translate3d(var(--x), var(--y), 0)",
         }}
       />
-    </>
+      <style jsx global>{`
+        body:hover button,
+        body:hover a,
+        body:hover .neumorphic-extruded,
+        body:hover .neumorphic-inset {
+          --cursor-scale: 2;
+        }
+      `}</style>
+    </div>
   );
 }
