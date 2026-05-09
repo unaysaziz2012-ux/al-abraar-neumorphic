@@ -301,12 +301,6 @@
                     <div class="absolute bottom-0 left-0 w-48 h-48 rounded-full neumorphic-inset opacity-30 translate-y-1/2 -translate-x-1/2"></div>
                     
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 relative z-10">
-                        <!-- Live Context Widget -->
-                        <div class="flex items-center gap-3 px-5 py-2.5 rounded-full neumorphic-inset-sm bg-[#E0E5EC]/50 backdrop-blur-sm">
-                            <div class="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-muted">Volgende Gebed: Dhuhr (13:42)</span>
-                        </div>
-                        
                         <div class="px-6 py-2 rounded-full neumorphic-inset-sm text-accent font-body font-bold text-xs tracking-[0.2em] uppercase">
                             Eindhovens Grootste Gemeenschap
                         </div>
@@ -749,6 +743,87 @@
                 }
             });
         });
+
+        // Floating Prayer Tab Logic
+        const openPrayerPanel = document.getElementById('open-prayer-panel');
+        const closePrayerPanel = document.getElementById('close-prayer-panel');
+        const linkPrayerPanel = document.getElementById('link-prayer-panel');
+        const prayerPanel = document.getElementById('prayer-panel');
+
+        function togglePrayerPanel(open) {
+            if (open) {
+                prayerPanel.classList.remove('translate-x-[120%]', 'opacity-0');
+                prayerPanel.classList.add('translate-x-0', 'opacity-100');
+                
+                openPrayerPanel.classList.remove('translate-x-0', 'opacity-100');
+                openPrayerPanel.classList.add('translate-x-full', 'opacity-0', 'pointer-events-none');
+            } else {
+                prayerPanel.classList.add('translate-x-[120%]', 'opacity-0');
+                prayerPanel.classList.remove('translate-x-0', 'opacity-100');
+                
+                openPrayerPanel.classList.add('translate-x-0', 'opacity-100');
+                openPrayerPanel.classList.remove('translate-x-full', 'opacity-0', 'pointer-events-none');
+            }
+        }
+
+        if(openPrayerPanel) openPrayerPanel.addEventListener('click', () => togglePrayerPanel(true));
+        if(closePrayerPanel) closePrayerPanel.addEventListener('click', () => togglePrayerPanel(false));
+        if(linkPrayerPanel) linkPrayerPanel.addEventListener('click', () => togglePrayerPanel(false));
+    </script>
+
+    <!-- Floating Prayer Times Tab -->
+    <div id="prayer-tab-container" class="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex items-center pointer-events-none">
+        <!-- Popout Panel -->
+        <div id="prayer-panel" class="bg-[#E0E5EC] neumorphic-extruded rounded-l-3xl p-6 mr-4 w-72 border-l border-white/20 pointer-events-auto transition-all duration-500 translate-x-[120%] opacity-0 absolute right-0">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="font-display font-bold text-foreground text-xl">Gebedstijden</h3>
+                <button id="close-prayer-panel" class="text-muted hover:text-foreground transition-colors p-2 rounded-full hover:neumorphic-inset-sm">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <div class="space-y-3">
+                <div class="flex justify-between items-center px-4 py-3 rounded-2xl neumorphic-inset-sm">
+                    <span class="font-body font-bold text-muted">Fajr</span>
+                    <span class="font-body font-bold text-foreground">04:30</span>
+                </div>
+                <div class="flex justify-between items-center px-4 py-3 rounded-2xl neumorphic-inset bg-accent/5">
+                    <span class="font-body font-bold text-accent">Dhuhr</span>
+                    <div class="flex items-center gap-2">
+                        <div class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></div>
+                        <span class="font-body font-bold text-accent">13:42</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center px-4 py-3 rounded-2xl neumorphic-inset-sm">
+                    <span class="font-body font-bold text-muted">Asr</span>
+                    <span class="font-body font-bold text-foreground">17:15</span>
+                </div>
+                <div class="flex justify-between items-center px-4 py-3 rounded-2xl neumorphic-inset-sm">
+                    <span class="font-body font-bold text-muted">Maghrib</span>
+                    <span class="font-body font-bold text-foreground">21:05</span>
+                </div>
+                <div class="flex justify-between items-center px-4 py-3 rounded-2xl neumorphic-inset-sm">
+                    <span class="font-body font-bold text-muted">Isha</span>
+                    <span class="font-body font-bold text-foreground">22:30</span>
+                </div>
+            </div>
+            <div class="mt-6 text-center">
+                <a href="#gebedstijden" id="link-prayer-panel" class="inline-block text-xs font-bold text-accent hover:text-accent/80 uppercase tracking-widest transition-colors">Naar gebedskalender &rarr;</a>
+            </div>
+        </div>
+
+        <!-- The Tab Button -->
+        <button id="open-prayer-panel" class="bg-accent text-white p-3 rounded-l-2xl shadow-lg hover:pr-5 transition-all duration-500 flex items-center justify-center pointer-events-auto translate-x-0 opacity-100">
+            <div class="flex flex-col items-center gap-3">
+                <i data-lucide="clock" class="w-5 h-5 animate-pulse-slow"></i>
+                <span class="text-[11px] font-bold uppercase tracking-widest" style="writing-mode: vertical-rl; transform: rotate(180deg);">Gebedstijden</span>
+            </div>
+        </button>
+    </div>
+    
+    <script>
+        // Re-init lucide icons for the new dynamic HTML
+        lucide.createIcons();
     </script>
 </body>
 

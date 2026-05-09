@@ -34,16 +34,6 @@ export default function Hero() {
           <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full neumorphic-inset opacity-30 translate-y-1/2 -translate-x-1/2" />
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 relative z-10">
-            {/* Live Context Widget */}
-            <motion.div 
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="flex items-center gap-3 px-5 py-2.5 rounded-full neumorphic-inset-sm bg-[#E0E5EC]/50 backdrop-blur-sm"
-            >
-              <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              <span className="text-[10px] font-bold uppercase tracking-widest text-muted">Volgende Gebed: Dhuhr (13:42)</span>
-            </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}

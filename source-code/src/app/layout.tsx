@@ -19,6 +19,8 @@ export const metadata: Metadata = {
   description: "Welkom bij Moskee Al-Abraar in Eindhoven. Een plek voor gebed, gemeenschap en educatie. Ontdek onze projecten en activiteiten.",
 };
 
+import PrayerTimesTab from "@/components/PrayerTimesTab";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -31,6 +33,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col font-body bg-background text-foreground selection:bg-accent selection:text-white">
         {children}
+        <PrayerTimesTab />
       </body>
     </html>
   );
