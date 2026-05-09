@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, DM_Sans } from "next/font/google";
+import CustomCursor from "@/components/CustomCursor";
 import "./globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -30,6 +31,7 @@ export default function RootLayout({
       className={`${plusJakartaSans.variable} ${dmSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-body bg-background text-foreground selection:bg-accent selection:text-white">
+        <CustomCursor />
         {children}
       </body>
     </html>
