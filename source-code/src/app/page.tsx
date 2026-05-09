@@ -12,7 +12,7 @@ export default function Home() {
       <PrayerTimes />
       
       {/* Community Section */}
-      <section id="over-ons" className="py-40 relative overflow-hidden">
+      <section id="over-ons" className="py-32 lg:py-56 relative overflow-hidden">
         <div className="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 rounded-full neumorphic-inset opacity-20 -translate-x-1/2" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
