@@ -23,7 +23,7 @@ export default function PrayerTimesTab() {
   if (!mounted) return null;
 
   return (
-    <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex items-center pointer-events-none">
+    <div className="fixed right-0 top-32 z-50 flex items-start pointer-events-none">
       {/* The popout panel */}
       <AnimatePresence>
         {isOpen && (
@@ -32,7 +32,7 @@ export default function PrayerTimesTab() {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "100%", opacity: 0 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="bg-[#E0E5EC] neumorphic-extruded rounded-l-3xl p-6 mr-4 w-72 border-l border-white/20 pointer-events-auto"
+            className="bg-[#E0E5EC] neumorphic-extruded rounded-l-3xl p-6 mr-4 w-72 border-l border-y border-white/20 pointer-events-auto"
           >
             <div className="flex justify-between items-center mb-6">
               <h3 className="font-display font-bold text-foreground text-xl">Gebedstijden</h3>
@@ -78,11 +78,15 @@ export default function PrayerTimesTab() {
       {/* The Tab Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`bg-accent text-white p-3 rounded-l-2xl shadow-lg hover:pr-5 transition-all duration-300 flex items-center justify-center pointer-events-auto ${isOpen ? 'opacity-0 translate-x-full absolute right-0' : 'opacity-100 translate-x-0'}`}
+        className={`pointer-events-auto absolute right-0 transition-all duration-500 ease-out ${
+          isOpen ? 'opacity-0 translate-x-full' : 'opacity-100 translate-x-0 hover:-translate-x-2'
+        }`}
       >
-        <div className="flex flex-col items-center gap-3">
-            <Clock size={20} className="animate-pulse-slow" />
-            <span className="text-[11px] font-bold uppercase tracking-widest" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>Gebedstijden</span>
+        <div className="flex items-center gap-3 px-5 py-3 rounded-l-full neumorphic-inset-sm bg-[#E0E5EC]/80 backdrop-blur-md border-y border-l border-white/40 hover:neumorphic-extruded shadow-lg transition-all duration-300 group">
+            <div className="w-2 h-2 rounded-full bg-accent animate-pulse group-hover:scale-125 transition-transform" />
+            <span className="text-[10px] font-bold uppercase tracking-widest text-muted group-hover:text-foreground transition-colors whitespace-nowrap">
+              Volgende Gebed: Dhuhr (13:42)
+            </span>
         </div>
       </button>
     </div>

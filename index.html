@@ -772,9 +772,9 @@
     </script>
 
     <!-- Floating Prayer Times Tab -->
-    <div id="prayer-tab-container" class="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex items-center pointer-events-none">
+    <div id="prayer-tab-container" class="fixed right-0 top-32 z-50 flex items-start pointer-events-none">
         <!-- Popout Panel -->
-        <div id="prayer-panel" class="bg-[#E0E5EC] neumorphic-extruded rounded-l-3xl p-6 mr-4 w-72 border-l border-white/20 pointer-events-auto transition-all duration-500 translate-x-[120%] opacity-0 absolute right-0">
+        <div id="prayer-panel" class="bg-[#E0E5EC] neumorphic-extruded rounded-l-3xl p-6 mr-4 w-72 border-l border-y border-white/20 pointer-events-auto transition-all duration-500 translate-x-[120%] opacity-0 absolute right-0">
             <div class="flex justify-between items-center mb-6">
                 <h3 class="font-display font-bold text-foreground text-xl">Gebedstijden</h3>
                 <button id="close-prayer-panel" class="text-muted hover:text-foreground transition-colors p-2 rounded-full hover:neumorphic-inset-sm">
@@ -813,10 +813,12 @@
         </div>
 
         <!-- The Tab Button -->
-        <button id="open-prayer-panel" class="bg-accent text-white p-3 rounded-l-2xl shadow-lg hover:pr-5 transition-all duration-500 flex items-center justify-center pointer-events-auto translate-x-0 opacity-100">
-            <div class="flex flex-col items-center gap-3">
-                <i data-lucide="clock" class="w-5 h-5 animate-pulse-slow"></i>
-                <span class="text-[11px] font-bold uppercase tracking-widest" style="writing-mode: vertical-rl; transform: rotate(180deg);">Gebedstijden</span>
+        <button id="open-prayer-panel" class="pointer-events-auto absolute right-0 transition-all duration-500 ease-out translate-x-0 opacity-100 hover:-translate-x-2">
+            <div class="flex items-center gap-3 px-5 py-3 rounded-l-full neumorphic-inset-sm bg-[#E0E5EC]/80 backdrop-blur-md border-y border-l border-white/40 hover:neumorphic-extruded shadow-lg transition-all duration-300 group">
+                <div class="w-2 h-2 rounded-full bg-accent animate-pulse group-hover:scale-125 transition-transform"></div>
+                <span class="text-[10px] font-bold uppercase tracking-widest text-muted group-hover:text-foreground transition-colors whitespace-nowrap">
+                    Volgende Gebed: Dhuhr (13:42)
+                </span>
             </div>
         </button>
     </div>
