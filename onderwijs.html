@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onderwijs | Moskee Al-Abraar Eindhoven</title>
+    <meta name="description" content="Koranles, Arabisch taalonderwijs en islamitische vorming voor kinderen en volwassenen bij Stichting Alabraar in Eindhoven.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@0.400.0/dist/umd/lucide.js"></script>
+    <style>
+        :root { --font-display:'Plus Jakarta Sans',sans-serif; --font-body:'DM Sans',sans-serif; --background:#E0E5EC; --foreground:#3D4852; --muted:#6B7280; --accent:#C5A059; --accent-light:#D4B475; --shadow-extruded:9px 9px 16px rgba(163,177,198,0.6),-9px -9px 16px rgba(255,255,255,0.5); --shadow-inset:inset 6px 6px 10px rgba(163,177,198,0.6),inset -6px -6px 10px rgba(255,255,255,0.5); --shadow-inset-sm:inset 3px 3px 6px rgba(163,177,198,0.6),inset -3px -3px 6px rgba(255,255,255,0.5); }
+        .font-display{font-family:var(--font-display)} .font-body{font-family:var(--font-body)} .text-accent{color:var(--accent)} .text-muted{color:var(--muted)} .text-foreground{color:var(--foreground)} .bg-background{background-color:var(--background)} .bg-accent{background-color:var(--accent)}
+        body{background-color:var(--background);color:var(--foreground);font-family:var(--font-body);overflow-x:hidden}
+        .neumorphic-extruded{box-shadow:var(--shadow-extruded)} .neumorphic-inset{box-shadow:var(--shadow-inset)} .neumorphic-inset-sm{box-shadow:var(--shadow-inset-sm)}
+        @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}} .animate-float{animation:float 3s ease-in-out infinite}
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Navbar -->
+    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20 px-4 md:px-8 rounded-2xl neumorphic-extruded bg-background transition-all duration-300">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group shrink-0">
+                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-full neumorphic-inset flex items-center justify-center p-1 overflow-hidden transition-transform group-hover:scale-105">
+                        <img src="Images/Al-Abraar-logo.svg" alt="Al-Abraar Logo" class="w-10 h-10 object-contain">
+                    </div>
+                    <span class="font-display font-extrabold text-lg md:text-xl tracking-tight text-foreground uppercase">AL-ABRAAR</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center gap-1">
+                    <div class="relative group">
+                        <a href="over-ons.html" class="flex items-center gap-1 font-body font-medium text-sm px-3 py-2 rounded-xl text-muted hover:text-foreground hover:neumorphic-inset-sm transition-all">Over Ons</a>
+                    </div>
+                    <div class="relative group">
+                        <a href="onderwijs.html" class="flex items-center gap-1 font-body font-medium text-sm px-3 py-2 rounded-xl text-accent neumorphic-inset-sm transition-all">Onderwijs <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180"></i></a>
+                        <!-- Submenu -->
+                        <div class="absolute top-full left-0 mt-2 w-52 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+                            <div class="p-3 rounded-2xl neumorphic-extruded bg-background space-y-1">
+                                <a href="onderwijs.html#koranles" class="block font-body text-sm text-muted hover:text-accent transition-colors py-2 px-3 rounded-xl hover:neumorphic-inset-sm">Koranles</a>
+                                <a href="onderwijs.html#arabisch" class="block font-body text-sm text-muted hover:text-accent transition-colors py-2 px-3 rounded-xl hover:neumorphic-inset-sm">Arabisch</a>
+                                <a href="onderwijs.html#kinderen" class="block font-body text-sm text-muted hover:text-accent transition-colors py-2 px-3 rounded-xl hover:neumorphic-inset-sm">Lessen voor kinderen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="gebedstijden.html" class="flex items-center gap-1 font-body font-medium text-sm px-3 py-2 rounded-xl text-muted hover:text-foreground hover:neumorphic-inset-sm transition-all">Gebedstijden</a>
+                    </div>
+                    <div class="relative group">
+                        <a href="projecten.html" class="flex items-center gap-1 font-body font-medium text-sm px-3 py-2 rounded-xl text-muted hover:text-foreground hover:neumorphic-inset-sm transition-all">Projecten <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180"></i></a>
+                        <div class="absolute top-full left-0 mt-2 w-52 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+                            <div class="p-3 rounded-2xl neumorphic-extruded bg-background space-y-1">
+                                <a href="projecten.html#vastgoed" class="block font-body text-sm text-muted hover:text-accent transition-colors py-2 px-3 rounded-xl hover:neumorphic-inset-sm">Vastgoed Project</a>
+                                <a href="projecten.html#voedselbank" class="block font-body text-sm text-muted hover:text-accent transition-colors py-2 px-3 rounded-xl hover:neumorphic-inset-sm">Voedselbank</a>
+                                <a href="projecten.html#anbi" class="block font-body text-sm text-muted hover:text-accent transition-colors py-2 px-3 rounded-xl hover:neumorphic-inset-sm">ANBI Status</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="contact.html" class="flex items-center gap-1 font-body font-medium text-sm px-3 py-2 rounded-xl text-muted hover:text-foreground hover:neumorphic-inset-sm transition-all">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <a href="doneren.html"
+                        class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-accent text-white font-body font-bold text-sm shadow-lg hover:bg-accent-light transition-all duration-300 active:scale-95">
+                        <i data-lucide="heart" class="w-[15px] h-[15px] fill-current"></i>
+                        Doneren
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center gap-3">
+                    <a href="doneren.html" class="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-accent text-white font-body font-bold text-sm">
+                        <i data-lucide="heart" class="w-[14px] h-[14px] fill-current"></i>
+                        Doneren
+                    </a>
+                    <button id="mobile-menu-btn" class="p-2.5 rounded-xl neumorphic-extruded active:neumorphic-inset-sm transition-all text-foreground" aria-label="Menu">
+                        <i data-lucide="menu" class="w-[22px] h-[22px]"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden mt-2 mx-4">
+            <div class="p-5 rounded-[28px] neumorphic-extruded bg-background space-y-1">
+                <a href="index.html" class="block font-body font-bold text-base text-foreground p-3 rounded-xl hover:neumorphic-inset-sm transition-all">Home</a>
+                <a href="over-ons.html" class="block font-body font-bold text-base text-foreground p-3 rounded-xl hover:neumorphic-inset-sm transition-all">Over Ons</a>
+                <div>
+                    <a href="onderwijs.html" class="flex items-center justify-between font-body font-bold text-base text-accent p-3 rounded-xl neumorphic-inset-sm transition-all">Onderwijs</a>
+                    <div class="pl-4 mt-1 space-y-1">
+                        <a href="onderwijs.html#koranles" class="block font-body text-sm text-muted hover:text-accent p-2 rounded-lg transition-colors">Koranles</a>
+                        <a href="onderwijs.html#arabisch" class="block font-body text-sm text-muted hover:text-accent p-2 rounded-lg transition-colors">Arabisch</a>
+                        <a href="onderwijs.html#kinderen" class="block font-body text-sm text-muted hover:text-accent p-2 rounded-lg transition-colors">Lessen voor kinderen</a>
+                    </div>
+                </div>
+                <a href="gebedstijden.html" class="block font-body font-bold text-base text-foreground p-3 rounded-xl hover:neumorphic-inset-sm transition-all">Gebedstijden</a>
+                <div>
+                    <a href="projecten.html" class="flex items-center justify-between font-body font-bold text-base text-foreground p-3 rounded-xl hover:neumorphic-inset-sm transition-all">Projecten</a>
+                    <div class="pl-4 mt-1 space-y-1">
+                        <a href="projecten.html#vastgoed" class="block font-body text-sm text-muted hover:text-accent p-2 rounded-lg transition-colors">Vastgoed Project</a>
+                        <a href="projecten.html#voedselbank" class="block font-body text-sm text-muted hover:text-accent p-2 rounded-lg transition-colors">Voedselbank</a>
+                        <a href="projecten.html#anbi" class="block font-body text-sm text-muted hover:text-accent p-2 rounded-lg transition-colors">ANBI Status</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="block font-body font-bold text-base text-foreground p-3 rounded-xl hover:neumorphic-inset-sm transition-all">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Header -->
+        <section class="pt-40 pb-20 relative overflow-hidden">
+            <div class="absolute top-20 right-10 w-80 h-80 rounded-full neumorphic-extruded opacity-20 animate-float"></div>
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <div class="inline-block px-6 py-2 rounded-full neumorphic-inset-sm text-accent font-body font-bold text-sm tracking-widest uppercase mb-6">Onderwijs</div>
+                <h1 class="font-display font-extrabold text-5xl md:text-7xl text-foreground mb-6" style="line-height:1.1">
+                    Kennis als <span class="text-accent">fundament</span>
+                </h1>
+                <p class="font-body text-xl text-muted max-w-3xl mx-auto" style="line-height:1.7">
+                    "Zoek kennis, van de wieg tot het graf." — Bij Stichting Alabraar bieden wij kwalitatief islamitisch onderwijs voor iedereen, van jong tot oud.
+                </p>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="pb-16">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+                    <div class="p-6 rounded-[28px] neumorphic-extruded text-center"><p class="font-display font-extrabold text-3xl text-accent mb-1">200+</p><p class="font-body text-sm text-muted">Leerlingen</p></div>
+                    <div class="p-6 rounded-[28px] neumorphic-extruded text-center"><p class="font-display font-extrabold text-3xl text-accent mb-1">20+</p><p class="font-body text-sm text-muted">Lessen per week</p></div>
+                    <div class="p-6 rounded-[28px] neumorphic-extruded text-center"><p class="font-display font-extrabold text-3xl text-accent mb-1">5</p><p class="font-body text-sm text-muted">Gecertif. docenten</p></div>
+                    <div class="p-6 rounded-[28px] neumorphic-extruded text-center"><p class="font-display font-extrabold text-3xl text-accent mb-1">3</p><p class="font-body text-sm text-muted">Programma's</p></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="h-24"></div>
+
+        <!-- Course 1: Koranles -->
+        <section id="koranles" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="lg:w-1/2">
+                        <div class="p-4 rounded-[48px] neumorphic-extruded">
+                            <div class="rounded-[40px] overflow-hidden neumorphic-inset" style="aspect-ratio:4/3">
+                                <img src="Images/Al-Abraar-019-scaled-e1663595410766.jpg.jpeg" alt="Koranles" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 space-y-6">
+                        <div class="w-14 h-14 rounded-2xl neumorphic-inset flex items-center justify-center"><i data-lucide="book-open" class="w-7 h-7 text-accent"></i></div>
+                        <p class="font-body text-accent font-bold text-sm uppercase tracking-wider">Voor kinderen & volwassenen</p>
+                        <h2 class="font-display font-extrabold text-4xl text-foreground">Koranles</h2>
+                        <p class="font-body text-muted text-lg" style="line-height:1.75">Wij bieden Koranles aan voor alle leeftijden. Kinderen leren de Koran lezen, memoriseren en begrijpen. Volwassenen kunnen ook deelnemen aan avondlessen.</p>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="flex items-center gap-2 p-3 rounded-xl neumorphic-inset-sm"><span class="w-2 h-2 rounded-full bg-accent shrink-0"></span><span class="font-body text-sm text-foreground">Leeftijd 6+</span></div>
+                            <div class="flex items-center gap-2 p-3 rounded-xl neumorphic-inset-sm"><span class="w-2 h-2 rounded-full bg-accent shrink-0"></span><span class="font-body text-sm text-foreground">Weekdagen & weekend</span></div>
+                            <div class="flex items-center gap-2 p-3 rounded-xl neumorphic-inset-sm"><span class="w-2 h-2 rounded-full bg-accent shrink-0"></span><span class="font-body text-sm text-foreground">Kleine groepen</span></div>
+                            <div class="flex items-center gap-2 p-3 rounded-xl neumorphic-inset-sm"><span class="w-2 h-2 rounded-full bg-accent shrink-0"></span><span class="font-body text-sm text-foreground">Gecertificeerde docenten</span></div>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 rounded-2xl neumorphic-inset">
+                            <i data-lucide="clock" class="w-5 h-5 text-accent shrink-0"></i>
+                            <p class="font-body text-sm text-muted">Ma t/m Vr: 16:00 – 18:00 | Za & Zo: 10:00 – 13:00</p>
+                        </div>
+                        <a href="contact.html" class="block w-full text-center py-4 rounded-2xl bg-accent text-white font-body font-bold text-base hover:bg-accent-light transition-all">Aanmelden</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="h-16"></div>
+
+        <!-- Course 2: Arabisch -->
+        <section id="arabisch" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+                    <div class="lg:w-1/2">
+                        <div class="p-4 rounded-[48px] neumorphic-extruded">
+                            <div class="rounded-[40px] overflow-hidden neumorphic-inset" style="aspect-ratio:4/3">
+                                <img src="Images/Al-Abraar-067-2048x1365.jpg.jpeg" alt="Arabisch" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 space-y-6">
+                        <div class="w-14 h-14 rounded-2xl neumorphic-inset flex items-center justify-center"><i data-lucide="graduation-cap" class="w-7 h-7 text-accent"></i></div>
+                        <p class="font-body text-accent font-bold text-sm uppercase tracking-wider">Taal & Grammatica</p>
+                        <h2 class="font-display font-extrabold text-4xl text-foreground">Arabisch</h2>
+                        <p class="font-body text-muted text-lg" style="line-height:1.75">Leer Arabisch van de grond af aan. Onze cursussen omvatten moderne standaard Arabisch, islamitische terminologie en Koranische Arabisch voor beginners en gevorderden.</p>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="flex items-center gap-2 p-3 rounded-xl neumorphic-inset-sm"><span class="w-2 h-2 rounded-full bg-accent shrink-0"></span><span class="font-body text-sm text-foreground">Beginners & gevorderden</span></div>
+                            <div class="flex items-center gap-2 p-3 rounded-xl neumorphic-inset-sm"><span class="w-2 h-2 rounded-full bg-accent shrink-0"></span><span class="font-body text-sm text-foreground">Avondlessen</span></div>
+                            <div class="flex items-center gap-2 p-3 rounded-xl neumorphic-inset-sm"><span class="w-2 h-2 rounded-full bg-accent shrink-0"></span><span class="font-body text-sm text-foreground">Lesmateriaal inbegrepen</span></div>
+                            <div class="flex items-center gap-2 p-3 rounded-xl neumorphic-inset-sm"><span class="w-2 h-2 rounded-full bg-accent shrink-0"></span><span class="font-body text-sm text-foreground">Online mogelijk</span></div>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 rounded-2xl neumorphic-inset">
+                            <i data-lucide="clock" class="w-5 h-5 text-accent shrink-0"></i>
+                            <p class="font-body text-sm text-muted">Di & Do: 19:30 – 21:00</p>
+                        </div>
+                        <a href="contact.html" class="block w-full text-center py-4 rounded-2xl bg-accent text-white font-body font-bold text-base hover:bg-accent-light transition-all">Aanmelden</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="h-16"></div>
+
+        <!-- Course 3: Kinderen -->
+        <section id="kinderen" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="lg:w-1/2">
+                        <div class="p-4 rounded-[48px] neumorphic-extruded">
+                            <div class="rounded-[40px] overflow-hidden neumorphic-inset" style="aspect-ratio:4/3">
+                                <img src="Images/Al-Abraar-048-scaled.jpg.jpeg" alt="Islamitische Vorming" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 space-y-6">
+                        <div class="w-14 h-14 rounded-2xl neumorphic-inset flex items-center justify-center"><i data-lucide="users" class="w-7 h-7 text-accent"></i></div>
+                        <p class="font-body text-accent font-bold text-sm uppercase tracking-wider">Kinderen & Jongeren</p>
+                        <h2 class="font-display font-extrabold text-4xl text-foreground">Islamitische Vorming</h2>
+                        <p class="font-body text-muted text-lg" style="line-height:1.75">Een breed programma voor jonge moslims: islamitische basiskennis, fiqh, sira en morele vorming in een veilige en stimulerende omgeving voor kinderen en jongeren.</p>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="flex items-center gap-2 p-3 rounded-xl neumorphic-inset-sm"><span class="w-2 h-2 rounded-full bg-accent shrink-0"></span><span class="font-body text-sm text-foreground">Leeftijd 8–18 jaar</span></div>
+                            <div class="flex items-center gap-2 p-3 rounded-xl neumorphic-inset-sm"><span class="w-2 h-2 rounded-full bg-accent shrink-0"></span><span class="font-body text-sm text-foreground">Weekendlessen</span></div>
+                            <div class="flex items-center gap-2 p-3 rounded-xl neumorphic-inset-sm"><span class="w-2 h-2 rounded-full bg-accent shrink-0"></span><span class="font-body text-sm text-foreground">Spelenderwijs leren</span></div>
+                            <div class="flex items-center gap-2 p-3 rounded-xl neumorphic-inset-sm"><span class="w-2 h-2 rounded-full bg-accent shrink-0"></span><span class="font-body text-sm text-foreground">Activiteiten & uitjes</span></div>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 rounded-2xl neumorphic-inset">
+                            <i data-lucide="clock" class="w-5 h-5 text-accent shrink-0"></i>
+                            <p class="font-body text-sm text-muted">Zaterdag: 09:00 – 12:00</p>
+                        </div>
+                        <a href="contact.html" class="block w-full text-center py-4 rounded-2xl bg-accent text-white font-body font-bold text-base hover:bg-accent-light transition-all">Aanmelden</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="h-24"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pt-20 pb-10 border-t border-black/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div><span class="font-display font-extrabold text-xl text-foreground uppercase">AL-ABRAAR</span><p class="font-body text-muted text-sm mt-3" style="line-height:1.7">Stichting Alabraar — Eindhoven.</p></div>
+                <div>
+                    <h4 class="font-display font-bold text-lg text-foreground mb-5">Navigatie</h4>
+                    <ul class="space-y-2">
+                        <li><a href="over-ons.html" class="font-body text-sm text-muted hover:text-accent transition-colors">Over Ons</a></li>
+                        <li><a href="gebedstijden.html" class="font-body text-sm text-muted hover:text-accent transition-colors">Gebedstijden</a></li>
+                        <li><a href="onderwijs.html" class="font-body text-sm text-accent font-bold">Onderwijs</a></li>
+                        <li><a href="projecten.html" class="font-body text-sm text-muted hover:text-accent transition-colors">Projecten</a></li>
+                        <li><a href="doneren.html" class="font-body text-sm text-muted hover:text-accent transition-colors">Doneren</a></li>
+                        <li><a href="contact.html" class="font-body text-sm text-muted hover:text-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-display font-bold text-lg text-foreground mb-5">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex gap-3 text-muted"><i data-lucide="map-pin" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i><span class="font-body text-sm">Paukenstraat 2, 5642 RS Eindhoven</span></li>
+                        <li class="flex gap-3 text-muted"><i data-lucide="mail" class="w-4 h-4 text-accent shrink-0"></i><a href="mailto:info@alabraar.nl" class="font-body text-sm hover:text-accent">info@alabraar.nl</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-black/5"><p class="font-body text-sm text-muted">© 2025 Stichting Alabraar. Alle rechten voorbehouden.</p></div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => { nav.style.paddingTop = window.scrollY > 20 ? '0.5rem' : '1rem'; nav.style.paddingBottom = window.scrollY > 20 ? '0.5rem' : '1rem'; });
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => { document.getElementById('mobile-menu').classList.toggle('hidden'); });
+    </script>
+</body>
+</html>

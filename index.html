@@ -262,96 +262,96 @@
     </div>
 
     <!-- Navbar -->
-    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-6">
+    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20 px-8 rounded-2xl neumorphic-extruded bg-background">
+            <div class="flex justify-between items-center h-16 md:h-20 px-4 md:px-8 rounded-2xl neumorphic-extruded bg-background transition-all duration-300">
                 <!-- Logo -->
-                <a href="/" class="flex items-center gap-3 group">
-                    <div
-                        class="w-12 h-12 rounded-full neumorphic-inset flex items-center justify-center p-1 overflow-hidden transition-transform group-hover:scale-105">
-                        <img src="logo.svg"
-                            alt="Alabraar Logo" class="w-10 h-10 object-contain">
+                <a href="index.html" class="flex items-center gap-3 group shrink-0">
+                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-full neumorphic-inset flex items-center justify-center p-1 overflow-hidden transition-transform group-hover:scale-105">
+                        <img src="Images/Al-Abraar-logo.svg" alt="Al-Abraar Logo" class="w-10 h-10 object-contain">
                     </div>
-                    <span class="font-display font-extrabold text-xl tracking-tight text-foreground uppercase">
-                        ALABRAAR
-                    </span>
+                    <span class="font-display font-extrabold text-lg md:text-xl tracking-tight text-foreground uppercase">AL-ABRAAR</span>
                 </a>
 
                 <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center gap-8">
-                    <a href="#over-ons"
-                        class="font-body font-medium text-muted hover:text-foreground transition-colors py-2">Over
-                        ons</a>
+                <div class="hidden lg:flex items-center gap-1">
                     <div class="relative group">
-                        <button
-                            class="flex items-center gap-1 font-body font-medium text-muted hover:text-foreground transition-colors py-2">
-                            Missie en visie <i data-lucide="chevron-down"
-                                class="w-3.5 h-3.5 group-hover:rotate-180 transition-transform"></i>
-                        </button>
-                        <div
-                            class="absolute top-full left-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
-                            <div class="p-4 rounded-2xl neumorphic-extruded bg-background space-y-2">
-                                <a href="#"
-                                    class="block font-body text-sm text-muted hover:text-accent transition-colors py-1 px-2 rounded-lg hover:bg-background/50">Onze
-                                    Doelen</a>
-                                <a href="#"
-                                    class="block font-body text-sm text-muted hover:text-accent transition-colors py-1 px-2 rounded-lg hover:bg-background/50">Kernwaarden</a>
+                        <a href="over-ons.html" class="flex items-center gap-1 font-body font-medium text-sm px-3 py-2 rounded-xl text-muted hover:text-foreground hover:neumorphic-inset-sm transition-all">Over Ons</a>
+                    </div>
+                    <div class="relative group">
+                        <a href="onderwijs.html" class="flex items-center gap-1 font-body font-medium text-sm px-3 py-2 rounded-xl text-muted hover:text-foreground hover:neumorphic-inset-sm transition-all">Onderwijs <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180"></i></a>
+                        <!-- Submenu -->
+                        <div class="absolute top-full left-0 mt-2 w-52 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+                            <div class="p-3 rounded-2xl neumorphic-extruded bg-background space-y-1">
+                                <a href="onderwijs.html#koranles" class="block font-body text-sm text-muted hover:text-accent transition-colors py-2 px-3 rounded-xl hover:neumorphic-inset-sm">Koranles</a>
+                                <a href="onderwijs.html#arabisch" class="block font-body text-sm text-muted hover:text-accent transition-colors py-2 px-3 rounded-xl hover:neumorphic-inset-sm">Arabisch</a>
+                                <a href="onderwijs.html#kinderen" class="block font-body text-sm text-muted hover:text-accent transition-colors py-2 px-3 rounded-xl hover:neumorphic-inset-sm">Lessen voor kinderen</a>
                             </div>
                         </div>
                     </div>
-                    <a href="#ramadan"
-                        class="font-body font-medium text-muted hover:text-foreground transition-colors py-2">Ramadan</a>
-                    <a href="#doneren"
-                        class="font-body font-medium text-muted hover:text-foreground transition-colors py-2 text-accent font-bold">Doneren</a>
-                    <a href="#contact"
-                        class="font-body font-medium text-muted hover:text-foreground transition-colors py-2">Contact</a>
+                    <div class="relative group">
+                        <a href="gebedstijden.html" class="flex items-center gap-1 font-body font-medium text-sm px-3 py-2 rounded-xl text-muted hover:text-foreground hover:neumorphic-inset-sm transition-all">Gebedstijden</a>
+                    </div>
+                    <div class="relative group">
+                        <a href="projecten.html" class="flex items-center gap-1 font-body font-medium text-sm px-3 py-2 rounded-xl text-muted hover:text-foreground hover:neumorphic-inset-sm transition-all">Projecten <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180"></i></a>
+                        <div class="absolute top-full left-0 mt-2 w-52 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+                            <div class="p-3 rounded-2xl neumorphic-extruded bg-background space-y-1">
+                                <a href="projecten.html#vastgoed" class="block font-body text-sm text-muted hover:text-accent transition-colors py-2 px-3 rounded-xl hover:neumorphic-inset-sm">Vastgoed Project</a>
+                                <a href="projecten.html#voedselbank" class="block font-body text-sm text-muted hover:text-accent transition-colors py-2 px-3 rounded-xl hover:neumorphic-inset-sm">Voedselbank</a>
+                                <a href="projecten.html#anbi" class="block font-body text-sm text-muted hover:text-accent transition-colors py-2 px-3 rounded-xl hover:neumorphic-inset-sm">ANBI Status</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="contact.html" class="flex items-center gap-1 font-body font-medium text-sm px-3 py-2 rounded-xl text-muted hover:text-foreground hover:neumorphic-inset-sm transition-all">Contact</a>
+                    </div>
                 </div>
 
                 <!-- Actions -->
-                <div class="hidden md:flex items-center gap-4">
-                    <a href="#gebedstijden"
-                        class="px-6 py-2 rounded-xl neumorphic-extruded hover:neumorphic-extruded-hover active:neumorphic-inset-sm transition-all duration-300 font-body font-bold text-sm text-foreground">
-                        Gebedstijden
-                    </a>
-                    <a href="#doneren"
-                        class="flex items-center gap-2 px-6 py-2 rounded-xl bg-accent text-white font-body font-bold text-sm shadow-lg hover:bg-accent-light transition-all duration-300 active:scale-95">
-                        <i data-lucide="heart" class="w-4 h-4 fill-current"></i>
+                <div class="hidden lg:flex items-center gap-3">
+                    <a href="doneren.html"
+                        class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-accent text-white font-body font-bold text-sm shadow-lg hover:bg-accent-light transition-all duration-300 active:scale-95">
+                        <i data-lucide="heart" class="w-[15px] h-[15px] fill-current"></i>
                         Doneren
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn"
-                        class="p-3 rounded-xl neumorphic-extruded active:neumorphic-inset-sm transition-all text-foreground">
-                        <i data-lucide="menu" class="w-6 h-6"></i>
+                <div class="lg:hidden flex items-center gap-3">
+                    <a href="doneren.html" class="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-accent text-white font-body font-bold text-sm">
+                        <i data-lucide="heart" class="w-[14px] h-[14px] fill-current"></i>
+                        Doneren
+                    </a>
+                    <button id="mobile-menu-btn" class="p-2.5 rounded-xl neumorphic-extruded active:neumorphic-inset-sm transition-all text-foreground" aria-label="Menu">
+                        <i data-lucide="menu" class="w-[22px] h-[22px]"></i>
                     </button>
                 </div>
             </div>
         </div>
 
         <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden md:hidden mt-4 mx-4">
-            <div class="p-6 rounded-[32px] neumorphic-extruded bg-background space-y-4">
-                <a href="#over-ons"
-                    class="block font-body font-bold text-lg text-foreground p-3 rounded-2xl hover:neumorphic-inset transition-all">Over
-                    ons</a>
-                <a href="#missie"
-                    class="block font-body font-bold text-lg text-foreground p-3 rounded-2xl hover:neumorphic-inset transition-all">Missie
-                    en visie</a>
-                <a href="#ramadan"
-                    class="block font-body font-bold text-lg text-foreground p-3 rounded-2xl hover:neumorphic-inset transition-all">Ramadan</a>
-                <a href="#contact"
-                    class="block font-body font-bold text-lg text-foreground p-3 rounded-2xl hover:neumorphic-inset transition-all">Contact</a>
-                <div class="pt-4 flex flex-col gap-4">
-                    <a href="#gebedstijden"
-                        class="w-full text-center px-6 py-4 rounded-2xl neumorphic-extruded font-body font-bold text-foreground">Gebedstijden</a>
-                    <a href="#doneren"
-                        class="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-accent text-white font-body font-bold shadow-lg">
-                        <i data-lucide="heart" class="w-5 h-5 fill-current"></i>
-                        Doneren
-                    </a>
+        <div id="mobile-menu" class="hidden lg:hidden mt-2 mx-4">
+            <div class="p-5 rounded-[28px] neumorphic-extruded bg-background space-y-1">
+                <a href="index.html" class="block font-body font-bold text-base text-foreground p-3 rounded-xl hover:neumorphic-inset-sm transition-all">Home</a>
+                <a href="over-ons.html" class="block font-body font-bold text-base text-foreground p-3 rounded-xl hover:neumorphic-inset-sm transition-all">Over Ons</a>
+                <div>
+                    <a href="onderwijs.html" class="flex items-center justify-between font-body font-bold text-base text-foreground p-3 rounded-xl hover:neumorphic-inset-sm transition-all">Onderwijs</a>
+                    <div class="pl-4 mt-1 space-y-1">
+                        <a href="onderwijs.html#koranles" class="block font-body text-sm text-muted hover:text-accent p-2 rounded-lg transition-colors">Koranles</a>
+                        <a href="onderwijs.html#arabisch" class="block font-body text-sm text-muted hover:text-accent p-2 rounded-lg transition-colors">Arabisch</a>
+                        <a href="onderwijs.html#kinderen" class="block font-body text-sm text-muted hover:text-accent p-2 rounded-lg transition-colors">Lessen voor kinderen</a>
+                    </div>
                 </div>
+                <a href="gebedstijden.html" class="block font-body font-bold text-base text-foreground p-3 rounded-xl hover:neumorphic-inset-sm transition-all">Gebedstijden</a>
+                <div>
+                    <a href="projecten.html" class="flex items-center justify-between font-body font-bold text-base text-foreground p-3 rounded-xl hover:neumorphic-inset-sm transition-all">Projecten</a>
+                    <div class="pl-4 mt-1 space-y-1">
+                        <a href="projecten.html#vastgoed" class="block font-body text-sm text-muted hover:text-accent p-2 rounded-lg transition-colors">Vastgoed Project</a>
+                        <a href="projecten.html#voedselbank" class="block font-body text-sm text-muted hover:text-accent p-2 rounded-lg transition-colors">Voedselbank</a>
+                        <a href="projecten.html#anbi" class="block font-body text-sm text-muted hover:text-accent p-2 rounded-lg transition-colors">ANBI Status</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="block font-body font-bold text-base text-foreground p-3 rounded-xl hover:neumorphic-inset-sm transition-all">Contact</a>
             </div>
         </div>
     </nav>
