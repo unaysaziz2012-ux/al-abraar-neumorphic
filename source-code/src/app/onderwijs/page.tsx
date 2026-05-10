@@ -17,7 +17,7 @@ const courses = [
     title: "Koranles",
     subtitle: "Voor kinderen & volwassenen",
     desc: "Wij bieden Koranles aan voor alle leeftijden. Kinderen leren de Koran lezen, memoriseren en begrijpen. Volwassenen kunnen ook deelnemen aan avondlessen.",
-    details: ["Leeftijd 6+", "Weekdagen & weekend", "Kleine groepen", "Gecertificeerde docenten"],
+    details: ["Leeftijd 6+", "Weekdagen & weekend", "Kleine groepen"],
     image: "/Al-Abraar-019-scaled-e1663595410766.jpg.jpeg",
     timing: "Ma t/m Vr: 16:00 – 18:00 | Za & Zo: 10:00 – 13:00",
   },
@@ -68,11 +68,9 @@ export default function OnderwijsPage() {
       {/* Stats */}
       <section className="pb-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
             {[
               { value: "200+", label: "Leerlingen" },
-              { value: "20+", label: "Lessen per week" },
-              { value: "5", label: "Gecertificeerde docenten" },
               { value: "3", label: "Programma's" },
             ].map(({ value, label }) => (
               <div key={label} className="p-6 rounded-[28px] neumorphic-extruded text-center">

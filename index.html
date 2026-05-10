@@ -142,7 +142,22 @@
         .neumorphic-extruded-sm {
             box-shadow: var(--shadow-extruded-sm);
         }
+    </style>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-background: #E0E5EC;
+            --color-foreground: #2D3436;
+            --color-accent: #C5A059;
+            --color-accent-light: #D4B475;
+            --color-accent-secondary: #927131;
+            --color-muted: #636E72;
+            --font-display: "Outfit", sans-serif;
+            --font-body: "Inter", sans-serif;
+        }
+    </style>
 
+    <style>
         .neumorphic-inset {
             box-shadow: var(--shadow-inset);
         }
@@ -184,7 +199,7 @@
     <div id="prayer-tab-container" style="position: fixed; right: 0; top: 25vh; z-index: 999999; display: flex; align-items: center; pointer-events: none;">
         <!-- Popout Panel -->
         <div id="prayer-panel" 
-             style="transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1); transform: translateX(100%); opacity: 0; pointer-events: auto;"
+             style="transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1); transform: translateX(100%); opacity: 0; pointer-events: none;"
              class="bg-[#E0E5EC] rounded-l-[3rem] p-10 mr-0 w-[22rem] border-l-4 border-y-4 border-white/60 absolute right-0 shadow-[-40px_0_80px_rgba(0,0,0,0.15)] neumorphic-extruded">
             
             <div class="flex justify-between items-center mb-10">
@@ -198,17 +213,14 @@
             </div>
             
             <div class="space-y-5">
-                <!-- Fajr -->
                 <div class="flex justify-between items-center px-8 py-5 rounded-[2rem] neumorphic-inset-sm opacity-90 hover:opacity-100 transition-all border border-white/10">
                     <span class="font-body font-black text-muted text-sm uppercase tracking-[0.2em]">Fajr</span>
                     <span class="font-display font-black text-2xl text-foreground">04:12</span>
                 </div>
-                <!-- Shuruq -->
                 <div class="flex justify-between items-center px-8 py-5 rounded-[2rem] neumorphic-inset-sm opacity-50 border-2 border-accent/10 border-dashed hover:opacity-100 transition-all">
                     <span class="font-body font-black text-accent/70 text-sm uppercase tracking-[0.2em]">Shuruq</span>
                     <span class="font-display font-black text-2xl text-accent/90">05:58</span>
                 </div>
-                <!-- Dhuhr (Next) -->
                 <div class="flex justify-between items-center px-8 py-6 rounded-[2rem] bg-accent text-white shadow-[0_20px_40px_rgba(197,160,89,0.5)] scale-[1.05] z-10 relative transition-transform hover:scale-[1.07]">
                     <span class="font-body font-black text-xs uppercase tracking-[0.4em] text-white/90">Dhuhr</span>
                     <div class="flex items-center gap-4">
@@ -216,17 +228,14 @@
                         <span class="font-display font-black text-3xl">13:34</span>
                     </div>
                 </div>
-                <!-- Asr -->
                 <div class="flex justify-between items-center px-8 py-5 rounded-[2rem] neumorphic-inset-sm opacity-90 hover:opacity-100 transition-all border border-white/10">
                     <span class="font-body font-black text-muted text-sm uppercase tracking-[0.2em]">Asr</span>
                     <span class="font-display font-black text-2xl text-foreground">17:38</span>
                 </div>
-                <!-- Maghrib -->
                 <div class="flex justify-between items-center px-8 py-5 rounded-[2rem] neumorphic-inset-sm opacity-90 hover:opacity-100 transition-all border border-white/10">
                     <span class="font-body font-black text-muted text-sm uppercase tracking-[0.2em]">Maghrib</span>
                     <span class="font-display font-black text-2xl text-foreground">21:10</span>
                 </div>
-                <!-- Isha -->
                 <div class="flex justify-between items-center px-8 py-5 rounded-[2rem] neumorphic-inset-sm opacity-90 hover:opacity-100 transition-all border border-white/10">
                     <span class="font-body font-black text-muted text-sm uppercase tracking-[0.2em]">Isha</span>
                     <span class="font-display font-black text-2xl text-foreground">22:56</span>
@@ -234,17 +243,17 @@
             </div>
 
             <div class="mt-12 pt-8 border-t border-accent/10 text-center">
-                <a href="#gebedstijden" style="pointer-events: auto;" class="group inline-flex items-center gap-4 text-xs font-black text-accent hover:text-accent-light uppercase tracking-[0.4em] transition-all">
+                <a href="gebedstijden.html" style="pointer-events: auto;" class="group inline-flex items-center gap-4 text-xs font-black text-accent hover:text-accent-light uppercase tracking-[0.4em] transition-all">
                     <span>Bekijk Rooster</span>
                     <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-3"></i>
                 </a>
             </div>
         </div>
 
-        <!-- The Tab Button (Handle) -->
+        <!-- The Tab Button -->
         <button id="open-prayer-panel" 
                 style="pointer-events: auto; border-top-left-radius: 3rem; border-bottom-left-radius: 3rem; border-right: 0; border-left: 3px solid rgba(255, 255, 255, 0.4);"
-                class="premium-gold-tab flex flex-col items-center gap-8 py-12 px-6 shadow-[-10px_0_30px_rgba(0,0,0,0.1)]">
+                class="premium-gold-tab flex flex-col items-center gap-8 py-12 px-6 shadow-[-10px_0_30px_rgba(0,0,0,0.1)] transition-all duration-500">
             <div class="relative">
                 <i data-lucide="clock" class="w-8 h-8 text-white drop-shadow-md"></i>
                 <div class="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-white border-2 border-accent pulse-white"></div>
@@ -253,10 +262,6 @@
                 <span class="text-base font-black uppercase tracking-[0.6em] text-white whitespace-nowrap">
                     Gebedstijden
                 </span>
-            </div>
-            <div class="flex flex-col gap-2 opacity-60">
-                <div class="w-2 h-2 rounded-full bg-white shadow-inner"></div>
-                <div class="w-2 h-2 rounded-full bg-white/40 shadow-inner"></div>
             </div>
         </button>
     </div>
@@ -285,7 +290,7 @@
                             <div class="p-3 rounded-2xl neumorphic-extruded bg-background space-y-1">
                                 <a href="onderwijs.html#koranles" class="block font-body text-sm text-muted hover:text-accent transition-colors py-2 px-3 rounded-xl hover:neumorphic-inset-sm">Koranles</a>
                                 <a href="onderwijs.html#arabisch" class="block font-body text-sm text-muted hover:text-accent transition-colors py-2 px-3 rounded-xl hover:neumorphic-inset-sm">Arabisch</a>
-                                <a href="onderwijs.html#kinderen" class="block font-body text-sm text-muted hover:text-accent transition-colors py-2 px-3 rounded-xl hover:neumorphic-inset-sm">Lessen voor kinderen</a>
+                        <a href="onderwijs.html#kinderen" class="block font-body text-sm text-muted hover:text-accent p-2 rounded-lg transition-colors">Lessen voor kinderen</a>
                             </div>
                         </div>
                     </div>
@@ -376,7 +381,7 @@
                 style="animation-delay: 1.5s;"></div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-                <div class="max-w-4xl mx-auto p-12 md:p-20 rounded-[80px] neumorphic-extruded bg-[#E0E5EC] text-center relative overflow-hidden">
+                <div class="max-w-3xl mx-auto p-8 md:p-12 rounded-[64px] neumorphic-extruded bg-[#E0E5EC] text-center relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-64 h-64 rounded-full neumorphic-inset opacity-40 -translate-y-1/2 translate-x-1/2"></div>
                     <div class="absolute bottom-0 left-0 w-48 h-48 rounded-full neumorphic-inset opacity-30 translate-y-1/2 -translate-x-1/2"></div>
                     
@@ -385,9 +390,11 @@
                             Eindhovens Grootste Gemeenschap
                         </div>
                     </div>
-                    <h1 class="font-display font-extrabold text-5xl md:text-8xl tracking-tight text-foreground mb-8 relative z-10 leading-[0.95]">
-                        Rechtvaardigheid in <br>
-                        <span class="text-accent">Hartje Eindhoven</span>
+                    <!-- Title -->
+                    <h1 class="font-display font-black text-4xl md:text-6xl lg:text-7xl tracking-tighter text-foreground mb-8 leading-[0.9] flex flex-col items-center text-center">
+                        <span class="opacity-90">Rechtvaardigheid</span>
+                        <span class="italic text-accent-secondary text-3xl md:text-4xl lg:text-5xl my-2">in</span>
+                        <span class="text-accent bg-gradient-to-br from-[#C5A059] to-[#927131] bg-clip-text text-transparent drop-shadow-sm">Hartje Eindhoven</span>
                     </h1>
                     <p class="font-body text-lg md:text-2xl text-muted max-w-2xl mx-auto mb-12 leading-relaxed relative z-10">
                         Welkom bij Stichting Alabraar. Samen bouwen we aan een gemeenschap gebaseerd op educatie,
@@ -411,11 +418,10 @@
             </div>
         </section>
 
-        <!-- Massive Cinematic Spacer -->
-        <div class="h-48 lg:h-96 w-full bg-[#E0E5EC] relative z-10"></div>
+
 
         <!-- Prayer Times Section -->
-        <section id="gebedstijden" class="py-48 lg:py-72 bg-background scroll-mt-navbar">
+        <section id="gebedstijden" class="py-24 lg:py-32 bg-background scroll-mt-navbar">
             <div class="max-w-4xl mx-auto px-4 sm:px-6">
                 <div class="text-center mb-12">
                     <h2 class="font-display font-bold text-4xl text-foreground mb-4">Gebedstijden Eindhoven</h2>
@@ -482,11 +488,10 @@
             </div>
         </section>
 
-    <!-- Massive Cinematic Spacer -->
-    <div class="h-32 lg:h-64 w-full bg-[#E0E5EC] relative z-10"></div>
+
 
     <!-- About Section -->
-        <section id="over-ons" class="py-64 scroll-mt-navbar relative overflow-hidden">
+        <section id="over-ons" class="py-24 lg:py-32 scroll-mt-navbar relative overflow-hidden">
             <div
                 class="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 rounded-full neumorphic-inset opacity-20 -translate-x-1/2">
             </div>
@@ -532,11 +537,10 @@
             </div>
         </section>
 
-    <!-- Massive Cinematic Spacer -->
-    <div class="h-32 lg:h-64 w-full bg-[#E0E5EC] relative z-10"></div>
+
 
     <!-- Projects Section -->
-        <section id="doneren" class="py-64 bg-background/50 scroll-mt-navbar relative">
+        <section id="doneren" class="py-24 lg:py-32 bg-background/50 scroll-mt-navbar relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
                     <div class="max-w-2xl">
@@ -643,11 +647,10 @@
         </section>
 
 
-        <!-- Massive Cinematic Spacer -->
-        <div class="h-48 lg:h-96 w-full bg-[#E0E5EC] relative z-10"></div>
+
 
         <!-- Newsletter Section -->
-        <section class="py-80 relative">
+        <section class="py-24 lg:py-32 relative">
             <div class="max-w-5xl mx-auto px-4 sm:px-6">
                 <div
                     class="p-12 md:p-16 rounded-[48px] neumorphic-extruded bg-background text-center relative overflow-hidden">
@@ -834,6 +837,7 @@
                         lucide.createIcons();
                     }
                 }
+            });
         });
     </script>
 
@@ -877,65 +881,6 @@
     </style>
 
     <!-- Floating Prayer Times Tab -->
-    <div id="prayer-tab-container" class="fixed right-0 top-[30%] z-[10000] flex items-center pointer-events-none">
-        <!-- Popout Panel -->
-        <div id="prayer-panel" 
-             style="transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1); transform: translateX(100%); opacity: 0; pointer-events: none;"
-             class="bg-[#E0E5EC] rounded-l-[3rem] p-10 mr-0 w-[22rem] border-l-4 border-y-4 border-white/60 absolute right-0 shadow-[-40px_0_80px_rgba(0,0,0,0.15)] neumorphic-extruded">
-            
-            <div class="flex justify-between items-center mb-10">
-                <div>
-                    <h3 class="font-display font-black text-foreground text-3xl tracking-tighter uppercase mb-1 italic">Gebedstijden</h3>
-                    <div class="h-1.5 w-16 bg-accent rounded-full shadow-md"></div>
-                </div>
-                <button id="close-prayer-panel" class="text-muted hover:text-accent transition-all p-3 rounded-full neumorphic-extruded hover:neumorphic-inset-sm active:scale-90 pointer-events-auto">
-                    <i data-lucide="x" class="w-6 h-6"></i>
-                </button>
-            </div>
-            
-            <div class="space-y-5">
-                <!-- Fajr -->
-                <div class="flex justify-between items-center px-8 py-5 rounded-[2rem] neumorphic-inset-sm opacity-90 hover:opacity-100 transition-all border border-white/10">
-                    <span class="font-body font-black text-muted text-sm uppercase tracking-[0.2em]">Fajr</span>
-                    <span class="font-display font-black text-2xl text-foreground">04:12</span>
-                </div>
-                <!-- Shuruq -->
-                <div class="flex justify-between items-center px-8 py-5 rounded-[2rem] neumorphic-inset-sm opacity-50 border-2 border-accent/10 border-dashed hover:opacity-100 transition-all">
-                    <span class="font-body font-black text-accent/70 text-sm uppercase tracking-[0.2em]">Shuruq</span>
-                    <span class="font-display font-black text-2xl text-accent/90">05:58</span>
-                </div>
-                <!-- Dhuhr (Next) -->
-                <div class="flex justify-between items-center px-8 py-6 rounded-[2rem] bg-accent text-white shadow-[0_20px_40px_rgba(197,160,89,0.5)] scale-[1.05] z-10 relative transition-transform hover:scale-[1.07]">
-                    <span class="font-body font-black text-xs uppercase tracking-[0.4em] text-white/90">Dhuhr</span>
-                    <div class="flex items-center gap-4">
-                        <div class="w-3 h-3 rounded-full bg-white pulse-white"></div>
-                        <span class="font-display font-black text-3xl">13:34</span>
-                    </div>
-                </div>
-                <!-- Asr -->
-                <div class="flex justify-between items-center px-8 py-5 rounded-[2rem] neumorphic-inset-sm opacity-90 hover:opacity-100 transition-all border border-white/10">
-                    <span class="font-body font-black text-muted text-sm uppercase tracking-[0.2em]">Asr</span>
-                    <span class="font-display font-black text-2xl text-foreground">17:38</span>
-                </div>
-                <!-- Maghrib -->
-                <div class="flex justify-between items-center px-8 py-5 rounded-[2rem] neumorphic-inset-sm opacity-90 hover:opacity-100 transition-all border border-white/10">
-                    <span class="font-body font-black text-muted text-sm uppercase tracking-[0.2em]">Maghrib</span>
-                    <span class="font-display font-black text-2xl text-foreground">21:10</span>
-                </div>
-                <!-- Isha -->
-                <div class="flex justify-between items-center px-8 py-5 rounded-[2rem] neumorphic-inset-sm opacity-90 hover:opacity-100 transition-all border border-white/10">
-                    <span class="font-body font-black text-muted text-sm uppercase tracking-[0.2em]">Isha</span>
-                    <span class="font-display font-black text-2xl text-foreground">22:56</span>
-                </div>
-            </div>
-
-            <div class="mt-12 pt-8 border-t border-accent/10 text-center">
-                <a href="#gebedstijden" class="group inline-flex items-center gap-4 text-xs font-black text-accent hover:text-accent-light uppercase tracking-[0.4em] transition-all pointer-events-auto">
-                    <span>Bekijk Rooster</span>
-                    <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-3"></i>
-                </a>
-            </div>
-           <!-- Scripts -->
     <script>
         // Floating Prayer Tab Logic
         function initPrayerTab() {
@@ -973,10 +918,25 @@
             });
         }
 
+        // Smooth Scroll for Navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
         // Initialize everything
         document.addEventListener('DOMContentLoaded', () => {
             initPrayerTab();
-            lucide.createIcons();
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
         });
     </script>
 </body>

@@ -13,16 +13,14 @@ export default function Home() {
       <Navbar />
       <Hero />
 
-      {/* Spacer */}
-      <div className="h-48 lg:h-96 w-full bg-background relative z-10" />
+
 
       <PrayerTimes />
 
-      {/* Spacer */}
-      <div className="h-48 lg:h-96 w-full bg-background relative z-10" />
+
 
       {/* Community / About Section */}
-      <section id="over-ons" className="py-24 relative overflow-hidden">
+      <section id="over-ons" className="py-24 lg:py-32 relative overflow-hidden">
         <div className="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 rounded-full neumorphic-inset opacity-20 -translate-x-1/2" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -85,16 +83,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Spacer */}
-      <div className="h-48 lg:h-96 w-full bg-background relative z-10" />
+
 
       <Projects />
 
-      {/* Spacer */}
-      <div className="h-48 lg:h-96 w-full bg-background relative z-10" />
+
 
       {/* Newsletter Section */}
-      <section className="py-24 relative">
+      <section className="py-24 lg:py-32 relative">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="p-12 md:p-20 rounded-[64px] neumorphic-extruded bg-background text-center relative overflow-hidden">
             <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full neumorphic-inset-deep opacity-40" />
